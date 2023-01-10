@@ -1,0 +1,105 @@
+{
+   "log": {
+      "access": "none",
+      "error": "none",
+      "loglevel": "none"
+   },
+   "dns": {
+      "servers": [
+         "https+local://8.8.8.8/dns-query"
+      ]
+   },
+   "inbounds": [
+      {
+         "port": 5432,
+         "listen": "127.0.0.1",
+         "protocol": "vless",
+         "settings": {
+            "clients": [
+               {
+                  "id": "72fd09c4-42bd-3cc9-10da-f5c791d16841",
+                  "level": 0,
+                  "email": "pr@microsoft.com"
+               }
+            ],
+            "decryption": "none"
+         },
+         "streamSettings": {
+            "network": "ws",
+            "security": "none",
+            "wsSettings": {
+               "path": "/.temp/tunnel/id/.86de6451-e653-4318-bd38-4e8e4a9d8006/LESS"
+            }
+         },
+         "sniffing": {
+            "enabled": true,
+            "destOverride": [
+               "http",
+               "tls"
+            ]
+         }
+      },
+      {
+         "port": 8443,
+         "listen": "127.0.0.1",
+         "protocol": "vless",
+         "settings": {
+            "clients": [
+               {
+                  "id": "72fd09c4-42bd-3cc9-10da-f5c791d16841",
+                  "level": 0,
+                  "email": "pr@microsoft.com"
+               }
+            ],
+            "decryption": "none"
+         },
+         "streamSettings": {
+            "network": "ws",
+            "security": "none",
+            "wsSettings": {
+               "path": "/.temp/tunnel/id/.86de6451-e653-4318-bd38-4e8e4a9d8006/LESS"
+            }
+         },
+         "sniffing": {
+            "enabled": true,
+            "destOverride": [
+               "http",
+               "tls"
+            ]
+         }
+      },
+      {
+         "port": 8080,
+         "protocol": "vmess",
+         "settings": {
+            "clients": [
+               {
+                  "id": "72fd09c4-42bd-3cc9-10da-f5c791d16841"
+               }
+            ]
+         },
+         "streamSettings": {
+            "network": "ws",
+            "wsSettings": {
+               "path": "/.temp/tunnel/id/.86de6451-e653-4318-bd38-4e8e4a9d8006/MESS"
+            }
+         },
+         "sniffing": {
+            "enabled": true,
+            "destOverride": [
+               "http",
+               "tls"
+            ]
+         }
+      }
+   ],
+   "outbounds": [
+      {
+         "protocol": "freedom",
+         "tag": "direct",
+         "settings": {
+            "domainStrategy": "UseIPv4"
+         }
+      }
+   ]
+}

@@ -11,7 +11,7 @@
    },
    "inbounds": [
       {
-         "port": 5432,
+         "port": 8080,
          "listen": "127.0.0.1",
          "protocol": "vless",
          "settings": {
@@ -69,7 +69,7 @@
          }
       },
       {
-         "port": 8080,
+         "port": 443,
          "protocol": "vmess",
          "settings": {
             "clients": [
